@@ -1,5 +1,6 @@
 import React from 'react';
 import './Track.css';
+import Audio from '../Audio/Audio';
 
 class Track extends React.Component {
 
@@ -32,6 +33,7 @@ class Track extends React.Component {
     return (
       <div className="Track">
         <img className="Track-art" src={this.props.track.art} alt={this.props.track.name} height="50" width="50"/>
+        <Audio id={this.props.track.id} preview={this.props.track.preview}/>
         <div className="Track-information">
           <h3>{this.props.track.name}</h3>
           <p>{this.props.track.artist} | {this.props.track.album}</p>

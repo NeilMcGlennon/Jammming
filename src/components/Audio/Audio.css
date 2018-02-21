@@ -1,0 +1,27 @@
+.Audio {
+  margin-right:10px;
+}
+
+.Audio button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: #6c41ec;
+  text-align: center;
+  border-radius: 4px;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+.Audio button:disabled {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: #010c3f;
+  text-align: center;
+  border-radius: 4px;
+  border: 0;
+  color: #111c4f;
+  font-size: 20px;
+}
