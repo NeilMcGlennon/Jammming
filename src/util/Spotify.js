@@ -7,13 +7,13 @@ const Spotify = {
 
   getAccessToken() {
 
-    console.log ( `Getting access token from Spotify...`);
+    //console.log ( `Getting access token from Spotify...`);
 
     const responseType = 'token';
     const scope = 'playlist-modify-public';
 
     if (accessToken) {
-      console.log ( `Using existing token.`);
+      //console.log ( `Using existing token.`);
       return accessToken;
     }
 
@@ -28,7 +28,7 @@ const Spotify = {
       window.setTimeout(() => accessToken = '', expiresIn * 1000);
       window.history.pushState('Access Token', null, '/');
 
-      console.log ( `Token retreived [${accessToken}]`);
+      //console.log ( `Token retreived [${accessToken}]`);
 
       return accessToken;
     } else {
@@ -38,7 +38,7 @@ const Spotify = {
 
   search(term) {
 
-    console.log ( `Searching Spotify with args: term[${term}]`);
+    //console.log ( `Searching Spotify with args: term[${term}]`);
 
     accessToken = Spotify.getAccessToken();
 
@@ -69,7 +69,7 @@ const Spotify = {
 
   savePlaylist(playlistName, trackURIs) {
 
-    console.log ( `Saving playlist to Spotfy with args: playlistName[${playlistName}] trackURIs[${trackURIs}]`);
+    //console.log ( `Saving playlist to Spotfy with args: playlistName[${playlistName}] trackURIs[${trackURIs}]`);
 
     if (!(playlistName || trackURIs)) {
       return;
